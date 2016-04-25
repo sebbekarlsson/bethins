@@ -1,0 +1,10 @@
+*.swp
+*.swo
+*.swa
+*.swm
+*.swn
+*cache*
+*egg*
+./venv
+venv
+venv/
