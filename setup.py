@@ -8,7 +8,8 @@ setup(
     install_requires=[
         'flask',
         'flask-wtf',
-        'wtforms'
+        'wtforms',
+        'pymongo'
     ],
     packages=[
         'bethins'

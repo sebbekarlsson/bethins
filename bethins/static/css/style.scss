@@ -1,4 +1,5 @@
 $color_ok: #40d47e;
+$color_soft: #3498db;
 
 
 * {
@@ -14,11 +15,11 @@ html, body {
 .bethins_splitview {
     display: flex;
     min-height: 100vh;
-    
+
     .part {
         width: 100%;
     }
-    
+
 }
 
 .bethins_sidebar {
@@ -90,11 +91,56 @@ html, body {
 }
 
 .ct-series .ct-line {
-  stroke: $color_ok !important;
+    stroke: $color_ok !important;
 }
 
 .ct-series-a .ct-point {
-  stroke: black !important;
+    stroke: black !important;
+}
+
+.hero {
+    width: 100%;
+    height: 32em;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    h1, h2, {
+        font-size: 6em;
+    }
+    
+    p {
+        font-size: 2.5em;
+    }
+}
+
+.hero-btn {
+    min-width: 92px;
+    height: 32px;
+    line-height: 32px;
+    padding: 1em;
+    color: white;
+    background-color: $color_ok;
+    text-align: center;
+    transition: .2s;
+    font-size: 2em;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $color_soft;
+        transition: .2s;
+    }
+}
+
+.centered_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #bethins_content {
@@ -111,7 +157,7 @@ html, body {
         display: inline-block;
         margin-left: 1em;
         margin-right: 1em;
-        
+
         .bethins_navbtn {
             color: white;
             text-decoration: none;
@@ -125,4 +171,8 @@ html, body {
 
 .bethins_topbottom {
     background-color: none !important;
+}
+
+.padded {
+    padding: 1em;
 }

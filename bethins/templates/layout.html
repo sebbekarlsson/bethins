@@ -17,6 +17,9 @@
         <script
         type='text/javascript'
         src='{{ url_for("static", filename="js/chartist-js/dist/chartist.min.js") }}'></script>
+        <script
+        type='text/javascript'
+        src='{{ url_for("static", filename="js/bethins/backgrounds.js") }}'></script>
                 
         {% block head %}
         {% endblock %}
@@ -26,40 +29,17 @@
             <ul class='left'>
             </ul>
             <ul class='right'>
-                <li><a class='bethins_navbtn'>Joseph</a></li>
-                <li><a class='bethins_navbtn'>Logout</a></li>
+                {% if is_loggedin() %}
+                    <li><a class='bethins_navbtn'>Joseph</a></li>
+                    <li><a class='bethins_navbtn'>Logout</a></li>
+                {% else %}
+                    <li><a class='bethins_navbtn'>Login</a></li>
+                    <li><a class='bethins_navbtn'>Register</a></li>
+                {% endif %}
             </ul>
         </nav>
-        <div class='bethins_splitview'>
-            <nav class='part bethins_sidebar'>
-                <section class='part' style='background: linear-gradient(
-      rgba(0, 0, 0, 0.45), 
-      rgba(0, 0, 0, 0.45)
-      ), url("{{ url_for("static", filename="image/man.jpg") }}"); background-size: cover; background-repeat: no-repeat; background-position: center;'>
-                    <section>
-                        <ul>
-                            <li>Money: 3817$</li>
-                            <li>Winning-rate: 42%</li>
-                            <li>Bets: 271</li>
-                        </ul>
-                    </section>
-                <nav class='bethins_topbottom bethins_navbar'>
-                    <ul class='right'>
-                        <li><a class='bethins_navbtn'>Joseph</a></li>
-                    </ul>
-                </nav>
-                </section>
-                <section class='part'>
-                    <a class='bethins_sidebtn'><span>Place bets</span></a>
-                    <a class='bethins_sidebtn'><span>Insert money</span></a>
-                    <a class='bethins_sidebtn'><span>Withdraw money</span></a>
-                </section>
-            </nav>
-            <div class='part' id='bethins_sidecontent'>
-                {% block content %}
-                {% endblock %}
-            </div>
-        </div>
+        {% block content %}
+        {% endblock %}
     </body>
     <footer>
         {% block footer %}

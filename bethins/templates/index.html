@@ -2,37 +2,15 @@
 
 
 {% block content %}
-    <section>
-        <h2>Your weekly winning-rate</h2>
-        <p>Average winnings per day: <span id='aver'></span>$</p>
-        <div class="ct-chart ct-perfect-fourth"></div>
-    </section>
-    <script>
-        var data = {
-          labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
-          series: [
-              [Math.floor((Math.random() * 10000) + 1),
-          Math.floor((Math.random() * 10000) + 1),
-          Math.floor((Math.random() * 10000) + 1),
-          Math.floor((Math.random() * 10000) + 1),
-          Math.floor((Math.random() * 10000) + 1)]
-          ]
-        };
-
-        var options = {
-          width: '100%',
-          height: 360
-        };
-
-new Chartist.Line('.ct-chart', data, options);
-
-var average = 0;
-for (var i = 0; i < data.series.length; i++) {
-    average += data.series[i][0];
-}
-
-average = average / 5;
-
-document.getElementById('aver').innerHTML = average;
-    </script>
+    <div class='hero' bg='{{ url_for("static", filename="image/scraper.jpg") }}'>
+        <section>
+            <h2>Bethins.com</h2>
+            <span class='centered_content padded'>
+                <p>Start betting now</p>
+            </span>
+            <span class='centered_content padded'>
+                <a class='hero-btn'>Register</a>
+            </span>
+        </section>
+    </div>
 {% endblock %}

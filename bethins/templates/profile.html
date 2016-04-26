@@ -1,0 +1,23 @@
+{% extends 'menuview.html' %}
+
+{% block sidemenu%}
+    <section class='part' bg='{{ url_for("static", filename="image/man.jpg") }}'>
+        <section>
+            <ul>
+                <li>Money: 3817$</li>
+                <li>Winning-rate: 42%</li>
+                <li>Bets: 271</li>
+            </ul>
+        </section>
+        <nav class='bethins_topbottom bethins_navbar'>
+            <ul class='right'>
+                <li><a class='bethins_navbtn'>Joseph</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class='part'>
+        <a class='bethins_sidebtn'><span>Place bets</span></a>
+        <a class='bethins_sidebtn'><span>Insert money</span></a>
+        <a class='bethins_sidebtn'><span>Withdraw money</span></a>
+    </section>
+{% endblock %}

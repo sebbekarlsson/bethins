@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class='bethins_splitview'>
+    <nav class='part bethins_sidebar'>
+        {% block sidemenu %}
+        {% endblock %}
+    </nav>
+    <div class='part' id='bethins_sidecontent'>
+        {% block sidecontent %}
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}
