@@ -14,16 +14,17 @@
         {% endblock %}
     </head>
     <body>
-        <div id='bethins_content'>
-            <nav class='bethins_navbar'>
-                <ul class='left'>
-                </ul>
-                <ul class='right'>
-                    <li><a class='bethins_navbtn'>Logout</a></li>
-                </ul>
+        <div class='bethins_splitview'>
+            <nav class='part bethins_sidebar'>
+                <section class='part'>
+
+                </section>
+                <section class='part'></section>
             </nav>
-            {% block content %}
-            {% endblock %}
+            <div class='part'>
+                {% block content %}
+                {% endblock %}
+            </div>
         </div>
     </body>
     <footer>
