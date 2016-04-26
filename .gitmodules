@@ -1,3 +1,6 @@
 [submodule "bethins/static/js/chartist-js"]
 	path = bethins/static/js/chartist-js
 	url = https://github.com/gionkunz/chartist-js.git
+[submodule "bethins/static/js/Ideal-Image-Slider"]
+	path = bethins/static/js/Ideal-Image-Slider
+	url = https://github.com/gilbitron/Ideal-Image-Slider.git

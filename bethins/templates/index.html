@@ -2,7 +2,11 @@
 
 
 {% block content %}
-    <div class='hero' bg='{{ url_for("static", filename="image/scraper.jpg") }}'>
+    <div class='hero' bg='
+    {{ url_for("static", filename="image/casino.jpg") }},
+    {{ url_for("static", filename="image/scraper.jpg") }},
+    {{ url_for("static", filename="image/man.jpg") }}
+    ' slide='true'>
         <section>
             <h2>Bethins.com</h2>
             <span class='centered_content padded'>
