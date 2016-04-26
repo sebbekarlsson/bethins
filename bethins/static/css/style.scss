@@ -11,6 +11,91 @@ html, body {
     height: 100%;
 }
 
+.bethins_splitview {
+    display: flex;
+    min-height: 100vh;
+    
+    .part {
+        width: 100%;
+    }
+    
+}
+
+.bethins_sidebar {
+    width: 25% !important;
+    border-right-color: lightgray;
+    border-right-style: solid;
+    border-right-width: 1px;
+
+    .part {
+        min-height: 100%;
+        width: 100%;
+    }
+
+    .bethins_sidebtn {
+        width: 100%;
+        height: 48px !important;
+        vertical-align: middle;
+        line-height: 48px;
+        color: black;
+        display: block;
+        border-bottom-color: lightgray;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+
+        span {
+            padding: 1em;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: $color_ok;
+        }
+    }
+
+    section:first-child {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        overflow: hidden;
+        display: flex;
+        height: 25%;
+        flex-wrap: wrap;
+
+        section {
+            padding: 1em;
+            width: 100%;
+        }
+
+        ul, li {
+            list-style: none;
+            margin-bottom: 1em;
+        }
+    }
+}
+
+#bethins_sidecontent {
+    section {
+        padding: 1em;
+    }
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.ct-series .ct-line {
+  stroke: $color_ok !important;
+}
+
+.ct-series-a .ct-point {
+  stroke: black !important;
+}
 
 #bethins_content {
     min-height: 100vh;
@@ -38,55 +123,6 @@ html, body {
     }
 }
 
-.bethins_splitview {
-    display: flex;
-    min-height: 100vh;
-    
-    .part {
-        width: 100%;
-    }
-    
-}
-
-.bethins_sidebar {
-    width: 32% !important;
-    display: flex;
-    flex-wrap: wrap;
-    border-right-color: lightgray;
-    border-right-style: solid;
-    border-right-width: 1px;
-
-    .part {
-        height: 100%;
-        width: 100%;
-    }
-
-    section:first-child {
-        border-bottom-color: lightgray;
-        border-bottom-style: solid;
-        border-bottom-width: 1px;
-        height: 16em;
-    }
-}
-
-#bethins_sidecontent {
-    section {
-        padding: 1em;
-    }
-}
-
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
-}
-
-.ct-series .ct-line {
-  stroke: $color_ok !important;
-}
-
-.ct-series-a .ct-point {
-  stroke: black !important;
+.bethins_topbottom {
+    background-color: none !important;
 }
