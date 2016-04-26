@@ -46,10 +46,19 @@ html, body {
     border-bottom-width: 1px;
     height: 16em; }
 
+#bethins_sidecontent section {
+  padding: 1em; }
+
 .left {
   float: left; }
 
 .right {
   float: right; }
+
+.ct-series .ct-line {
+  stroke: #40d47e !important; }
+
+.ct-series-a .ct-point {
+  stroke: black !important; }
 
 /*# sourceMappingURL=style.css.map */

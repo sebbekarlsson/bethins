@@ -6,10 +6,18 @@
         type='text/css'
         href='{{ url_for("static", filename="css/style.css") }}'>
         <link
+        rel='stylesheet'
+        type='text/css'
+        href='{{ url_for("static", filename="js/chartist-js/dist/chartist.min.css") }}'>
+        <link
         href='https://fonts.googleapis.com/css?family=Nobile'
         rel='stylesheet'
         type='text/css'>
-        
+
+        <script
+        type='text/javascript'
+        src='{{ url_for("static", filename="js/chartist-js/dist/chartist.min.js") }}'></script>
+                
         {% block head %}
         {% endblock %}
     </head>
@@ -21,7 +29,7 @@
                 </section>
                 <section class='part'></section>
             </nav>
-            <div class='part'>
+            <div class='part' id='bethins_sidecontent'>
                 {% block content %}
                 {% endblock %}
             </div>
