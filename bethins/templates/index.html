@@ -2,41 +2,16 @@
 
 
 {% block content %}
-    <div class='hero' bg='
+    <div class='hero centered_content wrap' bg='
     {{ url_for("static", filename="image/casino.jpg") }},
     {{ url_for("static", filename="image/scraper.jpg") }},
     {{ url_for("static", filename="image/man.jpg") }}
     ' slide='true'>
-        <section>
-            <span class='centered_content padded'>
-                <h2>Bethins.com</h2>
-            </span>
-            <span class='centered_content padded'>
-                <p>Start betting now</p>
-            </span>
-            <span class='centered_content padded'>
-                <a class='hero-btn' href='/register'>Register</a>
-            </span>
-            <!--<span class='padded'>
-                <div class='flow_cards'>
-                    <div class='card' bg='{{ url_for("static", filename="image/football.jpg") }}'>
-                        <h2>Football</h2>
-                    </div>
-                    <div class='card' bg='{{ url_for("static", filename="image/hockey.jpg") }}'>
-                        <h2>Hockey</h2>
-                    </div>
-                    <div class='card' bg='{{ url_for("static", filename="image/tennis.jpg") }}'>
-                        <h2>Tennis</h2>
-                    </div>
-                    <div class='card' bg='{{ url_for("static", filename="image/gaming.jpg") }}'>
-                        <h2>Gaming</h2>
-                    </div>
-                    <div class='card' bg='{{ url_for("static", filename="image/cards.jpg") }}'>
-                        <h2>Gambling</h2>
-                    </div>
-                </div>
-            </span>-->
+        <section class='centered_content wrap'>
+            <h2>Bethins.com</h2>
+            <p class='padded'>Place a bet today</p>
+            <a class='hero_btn' href='/register'>Start betting</a>
         </section>
     </div>
-    
+
 {% endblock %}

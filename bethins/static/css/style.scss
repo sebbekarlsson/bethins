@@ -118,29 +118,61 @@ html, body {
     }
 }
 
-.hero-btn {
+.hero_btn {
     min-width: 92px;
     height: 32px;
     line-height: 32px;
     padding: 1em;
     color: white;
-    background-color: $color_ok;
+    background-color: $color_soft;
     text-align: center;
     transition: .2s;
     font-size: 2em;
     text-decoration: none;
+    border: none;
+    display: inline-block;
 
     &:hover {
         cursor: pointer;
-        background-color: $color_soft;
+        background-color: $color_ok;
         transition: .2s;
     }
+}
+
+.btn {
+    min-width: 92px;
+    min-height: 16px;
+    line-height: 16px;
+    padding: 0.5em;
+    color: white;
+    background-color: $color_soft;
+    text-align: center;
+    transition: .2s;
+    font-size: 100%;
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $color_ok;
+        transition: .2s;
+    } 
+}
+
+input.hero_btn {
+    height: auto !important;
 }
 
 .centered_content {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.wrap {
+    flex-wrap: wrap !important;
+    flex-direction: column;
 }
 
 #bethins_content {
@@ -198,5 +230,50 @@ html, body {
         p, h1, h2, h3 {
             font-size: 100% !important;
         }
+    }
+}
+
+.hanging {
+    margin-top: 4em;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bethins_form {
+    input[type='text'], input[type='password'], input[type='email'] {
+        display: block;
+        outline: none;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: lightgray;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        background: none;
+        height: 32px;
+        width: 100%;
+    }
+
+    input, h1, h2, h3, h4, h5 {
+        margin-bottom: 1em;
+    }
+
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .hero {
+        h1, h2, {
+            font-size: 3em;
+        }
+
+        p {
+            font-size: 1.25em;
+        }
+    }
+
+    .hanging {
+        width: 80%;
     }
 }

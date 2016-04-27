@@ -81,26 +81,53 @@ html, body {
   .hero p {
     font-size: 2.5em; }
 
-.hero-btn {
+.hero_btn {
   min-width: 92px;
   height: 32px;
   line-height: 32px;
   padding: 1em;
   color: white;
-  background-color: #40d47e;
+  background-color: #3498db;
   text-align: center;
   transition: .2s;
   font-size: 2em;
-  text-decoration: none; }
-  .hero-btn:hover {
+  text-decoration: none;
+  border: none;
+  display: inline-block; }
+  .hero_btn:hover {
     cursor: pointer;
-    background-color: #3498db;
+    background-color: #40d47e;
     transition: .2s; }
+
+.btn {
+  min-width: 92px;
+  min-height: 16px;
+  line-height: 16px;
+  padding: 0.5em;
+  color: white;
+  background-color: #3498db;
+  text-align: center;
+  transition: .2s;
+  font-size: 100%;
+  text-decoration: none;
+  border: none;
+  display: inline-block; }
+  .btn:hover {
+    cursor: pointer;
+    background-color: #40d47e;
+    transition: .2s; }
+
+input.hero_btn {
+  height: auto !important; }
 
 .centered_content {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+.wrap {
+  flex-wrap: wrap !important;
+  flex-direction: column; }
 
 #bethins_content {
   min-height: 100vh; }
@@ -144,5 +171,37 @@ html, body {
     color: white; }
     .flow_cards .card p, .flow_cards .card h1, .flow_cards .card h2, .flow_cards .card h3 {
       font-size: 100% !important; }
+
+.hanging {
+  margin-top: 4em;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.bethins_form {
+  width: 100%; }
+  .bethins_form input[type='text'], .bethins_form input[type='password'], .bethins_form input[type='email'] {
+    display: block;
+    outline: none;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background: none;
+    height: 32px;
+    width: 100%; }
+  .bethins_form input, .bethins_form h1, .bethins_form h2, .bethins_form h3, .bethins_form h4, .bethins_form h5 {
+    margin-bottom: 1em; }
+
+@media screen and (max-width: 700px) {
+  .hero h1, .hero h2 {
+    font-size: 3em; }
+  .hero p {
+    font-size: 1.25em; }
+
+  .hanging {
+    width: 80%; } }
 
 /*# sourceMappingURL=style.css.map */
