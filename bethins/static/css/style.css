@@ -68,15 +68,14 @@ html, body {
 
 .hero {
   width: 100%;
-  height: 32em;
+  height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; }
+  align-items: center; }
   .hero h1, .hero h2 {
     font-size: 6em; }
   .hero p {
@@ -91,7 +90,8 @@ html, body {
   background-color: #40d47e;
   text-align: center;
   transition: .2s;
-  font-size: 2em; }
+  font-size: 2em;
+  text-decoration: none; }
   .hero-btn:hover {
     cursor: pointer;
     background-color: #3498db;
@@ -142,5 +142,7 @@ html, body {
     align-items: center;
     flex-wrap: wrap;
     color: white; }
+    .flow_cards .card p, .flow_cards .card h1, .flow_cards .card h2, .flow_cards .card h3 {
+      font-size: 100% !important; }
 
 /*# sourceMappingURL=style.css.map */

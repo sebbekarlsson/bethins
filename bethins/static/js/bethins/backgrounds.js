@@ -1,5 +1,5 @@
 function set_bg(element, src) {
-    element.setAttribute('style', "background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("+src+"); background-size: cover; background-repeat: no-repeat; background-position: center;");
+    element.setAttribute('style', "background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url("+src+"); background-size: cover; background-repeat: no-repeat; background-position: center;");
 }
 
 window.onload = function () { 
@@ -41,8 +41,6 @@ window.onload = function () {
                     el.setAttribute('image_id', image_id)
                 }
             }
-
-            //set_bg(el, src.replace("\n", ''));
         }
     }, 3000), 0);
 }
