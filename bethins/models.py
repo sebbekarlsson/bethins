@@ -58,6 +58,7 @@ class User(DBObject):
             password='',
             role='user',
             avatar=None,
+            cash=0,
             *args,
             **kwargs
             ):
