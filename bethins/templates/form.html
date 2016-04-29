@@ -1,15 +1,16 @@
 {% extends 'layout.html' %}
+{% from '_formhelpers.html' import render_field %}
 
 
 {% block content %}
     <div class='hanging'>
         <form class='bethins_form' method='post'>
             <h2>Signing up is easy</h2>
-            <input type='email' placeholder='Email'>
-            <input type='text' placeholder='Firstname'>
-            <input type='text' placeholder='Lastname'>
-            <input type='password' placeholder='Password'>
-            <input type='submit' class='btn' value='Register'>
+            {{ render_field(form.email) }}
+            {{ render_field(form.user_name) }}
+            {{ render_field(form.password) }}
+            {{ render_field(form.password_confirm) }}
+            {{ render_field(form.submit) }}
         </form>
     </div>
 {% endblock %}
