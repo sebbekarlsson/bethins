@@ -52,6 +52,7 @@ class User(DBObject):
 
     def __init__(
             self,
+            email='',
             nick_name='',
             first_name='',
             last_name='',
@@ -63,12 +64,14 @@ class User(DBObject):
             **kwargs
             ):
         DBObject.__init__(self, *args, **kwargs)
+        self.email = email
         self.nick_name = nick_name
         self.first_name = first_name
         self.last_name = last_name
         self.password = password
         self.role = role
         self.avatar = avatar
+        self.cash = cash
 
 
 class Option(DBObject):

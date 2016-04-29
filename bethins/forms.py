@@ -28,9 +28,11 @@ class UploadFileForm(Form):
 class UserForm(Form):
     email = EmailField('Email', [validators.Length(min=4, max=35)])
     user_name = TextField('User Name', [validators.Length(min=4, max=35)])
-    password = TextField('Choose Password', [
+    first_name = TextField('Firstname', [validators.Length(min=3, max=35)])
+    last_name = TextField('Firstname', [validators.Length(min=3, max=35)])
+    password = PasswordField('Choose Password', [
         validators.Required(),
         validators.EqualTo('password_confirm', message='Passwords must match')
     ])
-    password_confirm = TextField('Repeat Password')
+    password_confirm = PasswordField('Repeat Password')
     submit = SubmitField('Register')

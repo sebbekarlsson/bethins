@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% from '_formhelpers.html' import render_field %}
+
+
+{% block content %}
+    <div class='hanging'>
+        <form class='bethins_form' method='post'>
+            <section>
+                <h2>Signing up is easy</h2>
+                {{ render_field(form.email) }}
+                {{ render_field(form.first_name) }}
+                {{ render_field(form.last_name) }}
+                {{ render_field(form.user_name) }}
+                {{ render_field(form.password) }}
+                {{ render_field(form.password_confirm) }}
+                {{ render_field(form.submit) }}
+            </section>
+            {% if msg is not none %}
+                <section>
+                    <p>{{ msg }}</p>
+                </section>
+            {% endif %}
+        </form>
+    </div>
+{% endblock %}
